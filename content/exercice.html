@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../_static/img/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../_static/img/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+    <title>Exercices &#8212; Documentation Documentation Sphinx </title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_pyscript/pyscript.css?v=00d5298b" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=7990ab15" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=bf059b8c"></script>
+    <script src="../_static/sphinx_pyscript/pyscript.js?v=c8b54957"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/exercice';</script>
+    <link rel="canonical" href="https://ychistel.github.io/content/exercice.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Structure de liste chainée" href="liste_chaine.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Home"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="Home"/>`);</script>
+  
+  
+    <p class="title logo__title">SPHINX</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Les listes chainées
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="liste_chaine.html">Structure de liste chainée</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><div class="sidebar-primary-item">
+    <nav class="bd-links bd-docs-nav" aria-label="Main">
+    <h4>Liens vers sites</h4>
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+            
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://www.l-educdenormandie.fr/">ENT Normandie</a>
+            </li>
+            
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://ychistel.github.io/cours/">Cours sur Github</a>
+            </li>
+            
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://pydata-sphinx-theme.readthedocs.io/en/stable/">PyData Sphinx Thème</a>
+            </li>
+            
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://sphinx-book-theme.readthedocs.io/en/latest/index.html">Sphinx Book Thème</a>
+            </li>
+            
+        </ul>
+    </div>
+    </nav>
+</div></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/exercice.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercices</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5">Exercice 5</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien vers cette rubrique">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On donne l’interface d’une liste chainée qui sera utilisée dans les exercices.</p>
+<ul class="simple">
+<li><p>Le constructeur <code class="docutils literal notranslate"><span class="pre">creer_liste()</span></code> qui crée une liste chainée vide, c’est à dire un tuple vide;</p></li>
+<li><p>L’opérateur <code class="docutils literal notranslate"><span class="pre">inserer(element,</span> <span class="pre">liste)</span></code> qui ajoute un élément en tête de la liste chainée;</p></li>
+<li><p>Les accesseurs <code class="docutils literal notranslate"><span class="pre">tete(liste)</span></code> qui renvoie la tête de la liste chainée sans le supprimer et <code class="docutils literal notranslate"><span class="pre">queue(liste)</span></code> qui renvoie la liste chainée sans son premier élément;</p></li>
+<li><p>L’accesseur <code class="docutils literal notranslate"><span class="pre">est_vide(liste)</span></code> qui teste si la liste chainée est vide.</p></li>
+</ul>
+</div>
+<section id="section-1">
+<h2>Exercice 1<a class="headerlink" href="#section-1" title="Lien vers cette rubrique">#</a></h2>
+<p>On considère la liste chainée représentée ci-dessous:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/liste_chainee_exemple.svg"><img alt="../_images/liste_chainee_exemple.svg" src="../_images/liste_chainee_exemple.svg" width="360px" /></a>
+</figure>
+<p>Cette liste chainée est constituée de trois maillons repésentés par des rectangles. Chaque maillon se compose de 2 parties:</p>
+<ul class="simple">
+<li><p>la tête qui contient une valeur;</p></li>
+<li><p>la queue qui contient la suite de la liste.</p></li>
+</ul>
+<p>Pour schématiser cette liste, on pourra la noter <code class="docutils literal notranslate"><span class="pre">L-&gt;[1]-&gt;[2]-&gt;[4]-&gt;[]</span></code>.</p>
+<ol class="arabic">
+<li><p>On construit cette liste chainée L en écrivant chaque maillon sous la forme d’un tuple (tête, queue).</p>
+<ol class="loweralpha simple">
+<li><p>Écrire avec des tuples cette liste chainée L.</p></li>
+<li><p>Donner une suite d’instructions en Python qui permet de construire cette liste chainée L. On n’utilise que les fonctions de l’interface de la liste chainée.</p></li>
+</ol>
+</li>
+<li><p>Comment mémoriser dans une variable Q la liste chainée <code class="docutils literal notranslate"><span class="pre">[2]-&gt;[4]-&gt;[]</span></code> à partir de la liste chainée L ?</p></li>
+<li><p>On construit une liste chainée P en saisissant les instructions Python suivantes dans une console:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">P</span> <span class="o">=</span> <span class="n">creer_liste</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">P</span> <span class="o">=</span> <span class="n">inserer</span><span class="p">(</span><span class="n">tete</span><span class="p">(</span><span class="n">L</span><span class="p">),</span><span class="n">P</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">P</span> <span class="o">=</span> <span class="n">inserer</span><span class="p">(</span><span class="n">tete</span><span class="p">(</span><span class="n">queue</span><span class="p">(</span><span class="n">L</span><span class="p">)),</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Représenter le contenu de la liste chainée P.</p>
+</li>
+<li><p>On construit la liste chainée R représentée par <code class="docutils literal notranslate"><span class="pre">[1]-&gt;[2]-&gt;[]</span></code>. Donner les instructions Python qui permettent de construire R à partir de la liste chainée L ?</p></li>
+</ol>
+</section>
+<section id="section-2">
+<h2>Exercice 2<a class="headerlink" href="#section-2" title="Lien vers cette rubrique">#</a></h2>
+<ol class="arabic">
+<li><p>On donne la représentation d’une liste chainée:</p>
+<a class="reference internal image-reference" href="../_images/liste_chainee_1.svg"><img alt="../_images/liste_chainee_1.svg" class="align-center" src="../_images/liste_chainee_1.svg" width="420px" /></a>
+<p>Donner la suite d’instruction en Python pour créer cette liste chainée.</p>
+</li>
+<li><p>En utilisant la liste <code class="docutils literal notranslate"><span class="pre">L1</span></code>, créer les différentes listes  de l’illustration ci-dessous.</p>
+<a class="reference internal image-reference" href="../_images/liste_chainee_2.svg"><img alt="../_images/liste_chainee_2.svg" class="align-center" src="../_images/liste_chainee_2.svg" width="420px" /></a>
+</li>
+</ol>
+</section>
+<section id="section-3">
+<h2>Exercice 3<a class="headerlink" href="#section-3" title="Lien vers cette rubrique">#</a></h2>
+<p>On donne une implémentation de la liste chainée avec des tuples.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">creer_liste</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">liste</span> <span class="o">==</span> <span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">tete</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">liste</span><span class="p">),</span> <span class="s2">&quot;tête, liste vide !&quot;</span>
+    <span class="n">element</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">liste</span>
+    <span class="k">return</span> <span class="n">element</span>
+
+<span class="k">def</span> <span class="nf">queue</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">liste</span><span class="p">),</span> <span class="s2">&quot;queue, liste vide !&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">liste</span>
+    <span class="k">return</span> <span class="n">queue</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Créer et afficher la liste <code class="docutils literal notranslate"><span class="pre">L1</span></code> ci-dessous:</p>
+<a class="reference internal image-reference" href="../_images/liste_chainee_1.svg"><img alt="../_images/liste_chainee_1.svg" class="align-center" src="../_images/liste_chainee_1.svg" width="420px" /></a>
+</li>
+<li><p>On souhaite créer une fonction <code class="docutils literal notranslate"><span class="pre">afficher(liste)</span></code> qui prend en paramètre une liste et affiche la liste sous forme de chaine:</p>
+<ul class="simple">
+<li><p>chaque valeur sera écrite entre crochets</p></li>
+<li><p>les valeurs seront reliées par des flèches « -&gt; ».</p></li>
+</ul>
+<p>Voici le début du code de la fonction à compléter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">afficher</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+        <span class="n">t</span><span class="p">,</span> <span class="n">liste</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">chaine</span> <span class="o">+=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;]-&gt;&quot;</span>
+    <span class="n">chaine</span> <span class="o">+=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="section-4">
+<h2>Exercice 4<a class="headerlink" href="#section-4" title="Lien vers cette rubrique">#</a></h2>
+<p>On souhaite ajouter quelques fonctions pour agir sur une liste chainée.</p>
+<ol class="arabic simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">longueur</span></code> prend en paramètre une liste et renvoie le nombre d’éléments de la liste. Coder cette fonction sachant que si la liste est vide, la longueur est égale à 0.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">atteint</span></code> prend en paramètres une liste et un nombre entier positif. La fonction renvoie le nombre de la liste situé à la position indiquée par le nombre entier saisi en argument. On gèrera le cas ou la position est supérieure à la longueur de la liste pour éviter une erreur. La tête de la liste a pour position 0. Coder en Python la fonction.</p></li>
+</ol>
+</section>
+<section id="section-5">
+<h2>Exercice 5<a class="headerlink" href="#section-5" title="Lien vers cette rubrique">#</a></h2>
+<p>Soit L une liste chainée qui contient les valeurs <code class="docutils literal notranslate"><span class="pre">Bob</span></code>, <code class="docutils literal notranslate"><span class="pre">Alice</span></code>, <code class="docutils literal notranslate"><span class="pre">Patrick</span></code>, <code class="docutils literal notranslate"><span class="pre">Gary</span></code> et <code class="docutils literal notranslate"><span class="pre">Carlo</span></code>. On considère que le nom <code class="docutils literal notranslate"><span class="pre">Bob</span></code> est la tête de la liste et que l’ordre est respecté.</p>
+<ol class="arabic simple">
+<li><p>Créer en Python cette liste chainée.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">renverse</span></code> prend en paramètre une liste et renverse les valeurs de la liste. La tête de liste devient la dernière valeur de la liste. La fonction renvoie une liste chainée.</p>
+<ol class="loweralpha simple">
+<li><p>Coder la fonction <code class="docutils literal notranslate"><span class="pre">renverse</span></code>.</p></li>
+<li><p>Créer la liste chainée K en renversant la liste L.</p></li>
+</ol>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">inserer_fin</span></code> prend en paramètre une liste et une valeur à insérer en fin de liste. La fonction renvoie la liste chainée avec la valeur insérée en fin de liste. On peut utiliser l’algorithme suivant pour notre fonction:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. créer une liste tmp contenant la valeur à insérer
+2. renverser la liste qui doit accueillir la nouvelle valeur
+3. insérer les éléments de la liste renversée dans la liste tmp.
+</pre></div>
+</div>
+<p>Coder la fonction et insérer une nouvelle valeur en fin de liste.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="liste_chaine.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Structure de liste chainée</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5">Exercice 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024,Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
