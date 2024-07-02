@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('./content'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentation Sphinx'
+project = 'Documentation'
 author = 'Yannick Chistel'
 year = '2024'
 copyright = year + ',' + author
@@ -59,7 +59,7 @@ html_theme_options = {
     "home_page_in_toc" : True,
     "logo":{
         "alt_text":"Home",
-        "text": "SPHINX"
+        "text": "T.NSI"
     },
     "use_download_button": True,
     "icon_links": [
@@ -67,7 +67,7 @@ html_theme_options = {
             # Label for this link
             "name": "GitHub",
             # URL where the link will redirect
-            "url": "https://github.com/<your-org>/<your-repo>",  # required
+            "url": "https://github.com/ychistel/tnsi_listechaine",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-brands fa-square-github",
             # The type of image to be used (see below for details)
