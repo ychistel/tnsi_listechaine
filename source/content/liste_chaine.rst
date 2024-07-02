@@ -44,8 +44,8 @@ Les fonctions qui assurent l'interface de liste chainée sont:
 
 
 .. pyscript::
+    :file: ../python/implementation.py
 
-    
 .. note::
 
     1. Une implémentation peut être faite en programmation objet plus efficace en mémoire que celle présentée ici.
