@@ -42,6 +42,10 @@ Les fonctions qui assurent l'interface de liste chainée sont:
 -   Les accesseurs ``tete(liste)`` qui renvoie la tête de la liste chainée sans le supprimer et ``queue(liste)`` qui renvoie la liste chainée sans son premier élément;
 -   L'accesseur ``est_vide(liste)`` qui teste si la liste chainée est vide.
 
+
+.. pyscript::
+
+    
 .. note::
 
     1. Une implémentation peut être faite en programmation objet plus efficace en mémoire que celle présentée ici.
